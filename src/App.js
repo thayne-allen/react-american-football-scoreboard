@@ -10,13 +10,13 @@ function App() {
   const usingHomeState = useState(0);
   const setHomeStateVar = usingHomeState[1];
   
-  const [homeCount, setHomeCount] = useState(0);
+  const [homeCount, setHomeCount] = useState(24);
 
   // useState hooks for away
   const usingAwayState = useState(0);
   const setAwayStateVar = usingAwayState[1];
 
-  const [awayCount, setAwayCount] = useState(0);
+  const [awayCount, setAwayCount] = useState(17);
 
 
 
@@ -31,7 +31,7 @@ function App() {
 
             <div className="home__score">{homeCount}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer"><span id="time">00:03</span></div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayCount}</div>
@@ -42,11 +42,11 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={() => setHomeCount(homeCount + 6)}>Home Touchdown</button>
+          <button className="homeButtons__touchdown" onClick={() => setHomeCount(homeCount + 7)}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={() => setHomeCount(homeCount + 3)}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={() => setAwayCount(awayCount + 6)}>Away Touchdown</button>
+          <button className="awayButtons__touchdown" onClick={() => setAwayCount(awayCount + 7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setAwayCount(awayCount + 3)}>Away Field Goal</button>
         </div>
       </section>
